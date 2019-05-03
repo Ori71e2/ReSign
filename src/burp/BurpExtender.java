@@ -843,7 +843,8 @@ public class BurpExtender implements IBurpExtender, IHttpListener, ITab, IContex
 	        JMenuItem menuItem = new JMenuItem("Send to ReSign");
 	        menuItem.addActionListener(new ActionListener()
 	        {
-	          public void actionPerformed(ActionEvent e)
+	          @SuppressWarnings("deprecation")
+			public void actionPerformed(ActionEvent e)
 	          {
 	            try
 	            {

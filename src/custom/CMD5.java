@@ -27,7 +27,8 @@ public class CMD5 {
     }
 
     // 返回形式只为数字
-    private static String byteToNum(byte bByte) {
+    @SuppressWarnings("unused")
+	private static String byteToNum(byte bByte) {
         int iRet = bByte;
         System.out.println("iRet1=" + iRet);
         if (iRet < 0) {
@@ -59,7 +60,7 @@ public class CMD5 {
     }
 
     public static void main(String[] args) {
-        CMD5 getMD5 = new CMD5();
-        System.out.println(getMD5.GetMD5Code("000000"));
+        // CMD5 getMD5 = new CMD5();
+        System.out.println(CMD5.GetMD5Code("000000"));
     }
 }

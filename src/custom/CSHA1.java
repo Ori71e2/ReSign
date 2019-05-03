@@ -1,18 +1,18 @@
 package custom;
 
-import java.io.UnsupportedEncodingException;
-import java.security.InvalidKeyException;
+// import java.io.UnsupportedEncodingException;
+// import java.security.InvalidKeyException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
+// import java.security.SecureRandom;
 
-import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.KeyGenerator;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
+// import javax.crypto.BadPaddingException;
+// import javax.crypto.Cipher;
+// import javax.crypto.IllegalBlockSizeException;
+// import javax.crypto.KeyGenerator;
+// import javax.crypto.NoSuchPaddingException;
+// import javax.crypto.SecretKey;
+// import javax.crypto.spec.SecretKeySpec;
 
 public class CSHA1 {
 

@@ -23,12 +23,12 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
-import javax.xml.crypto.dsig.spec.SignatureMethodParameterSpec;
-import javax.xml.parsers.FactoryConfigurationError;
+// import javax.xml.crypto.dsig.spec.SignatureMethodParameterSpec;
+// import javax.xml.parsers.FactoryConfigurationError;
 
 import burp.IParameter;
 import burp.IRequestInfo;
-import custom.CMapSort;
+// import custom.CMapSort;
 import custom.CSHA1;
 
 import java.awt.GridLayout;
@@ -36,32 +36,40 @@ import javax.swing.JButton;
 import javax.swing.JTextArea;
 import java.awt.event.ActionListener;
 import java.net.URI;
-import java.net.URLDecoder;
-import java.security.Signature;
-import java.util.ArrayList;
+// import java.net.URLDecoder;
+//import java.security.Signature;
+// import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
+// import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.SortedMap;
+// import java.util.SortedMap;
 import java.awt.event.ActionEvent;
-import java.awt.Dimension;
-import javax.swing.JSplitPane;
+// import java.awt.Dimension;
+// import javax.swing.JSplitPane;
 import java.awt.Cursor;
 import java.awt.Desktop;
 
-import javax.swing.BoxLayout;
-import javax.swing.border.LineBorder;
+// import javax.swing.BoxLayout;
+// import javax.swing.border.LineBorder;
 import java.awt.Color;
-import java.awt.Component;
+// import java.awt.Component;
 
 import javax.swing.ButtonGroup;
-import javax.swing.ButtonModel;
+// import javax.swing.ButtonModel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class CGUI extends JFrame {
+	/**
+	 * 避免--The serializable class CGUI does not declare a static final serialVersionUID field of type long--错误
+	 * 序列化时保持版本的兼容性，即在版本升级时反序列化仍保持对象的唯一性
+	 */
+	private static final long serialVersionUID = 1L;
+	/** 
+	 * Proxy Scanner Intruder Repeater 四个checkbox按钮
+	 */
 	public JCheckBox chckbxProxy;
 	public JCheckBox chckbxScanner;
 	public JCheckBox chckbxIntruder;
@@ -76,7 +84,7 @@ public class CGUI extends JFrame {
 	public JCheckBox chckbxMD5;
 	public JCheckBox chckbxNewCheckBox_3;
 	public JTextArea textAreaSign;
-	private JLabel lblconnector;
+	// private JLabel lblconnector;
 	public String extenderName = "Resign v2.0 by bit4";
 
 	
@@ -519,8 +527,8 @@ public class CGUI extends JFrame {
 				String sign = "Sign Error";
 				//System.out.print(getSignAlgorithm());
 				if (getSignAlgorithm().equals("MD5")){
-					CMD5 getMD5 = new CMD5();
-					sign = getMD5.GetMD5Code(textAreaFinalString.getText());
+					// CMD5 getMD5 = new CMD5();
+					sign = CMD5.GetMD5Code(textAreaFinalString.getText());
 				}else if (getSignAlgorithm().equals("SHA1")) {
 					sign = CSHA1.SHA1(textAreaFinalString.getText());
 				}
@@ -584,6 +592,7 @@ public class CGUI extends JFrame {
 		}
 	}
 	
+	@SuppressWarnings("unlikely-arg-type")
 	public String combineString(Map<String, String> paraMap, boolean onlyValue, String paraConnector) {
 		getSecKeyConfig();
 		
